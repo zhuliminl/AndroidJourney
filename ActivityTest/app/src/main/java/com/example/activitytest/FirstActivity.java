@@ -14,8 +14,10 @@ public class FirstActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.add_item:
+                Toast.makeText(this, "you click add_item ", Toast.LENGTH_LONG).show();
                 break;
             case R.id.remove_item:
+                Toast.makeText(this, "you click remove_item ", Toast.LENGTH_SHORT).show();
                 break;
             default:
         }
@@ -39,7 +41,9 @@ public class FirstActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(FirstActivity.this, "You clicked Button 1", Toast.LENGTH_LONG).show();
+                finish();
             }
+
         });
     }
 
