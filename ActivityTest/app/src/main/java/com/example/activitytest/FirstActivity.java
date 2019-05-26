@@ -1,5 +1,6 @@
 package com.example.activitytest;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -40,8 +41,13 @@ public class FirstActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+                Intent intent = new Intent("com.example.activitytest.ACTION_START");
+                startActivity(intent);
+
+
                 Toast.makeText(FirstActivity.this, "You clicked Button 1", Toast.LENGTH_LONG).show();
-                finish();
+               //  finish();
             }
 
         });
